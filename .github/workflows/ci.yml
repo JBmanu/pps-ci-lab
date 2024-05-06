@@ -6,11 +6,8 @@ on:
 jobs:
   Build:
     runs-on: ubuntu-latest
-    env:
-      TERM: dumb
     steps:
-      - name: Clone
+      - name: Build
         with:
           java-version: 15
-      - name: Build
         run: ./gradlew check
