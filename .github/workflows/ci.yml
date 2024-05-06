@@ -11,27 +11,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
-      - uses: actions/setup-jdk@v2.3.0
+      - uses: joschi/setup-jdk@v2.3.0
         with:
           java-version: 15
       - name: Build
         run: ./gradlew check
-
-
-#        name: Clone Repository
-#        on:
-#          push:
-#        jobs:
-#          Build:
-#            runs-on: ubuntu-latest
-#            env:
-#              TERM: dumb
-#            steps:
-#              - name: Checkout
-#                uses: actions/checkout@v2
-#              - uses: joschi/setup-jdk@v2.3.0
-#                with:
-#                  java-version: 15
-#              - name: Build
-#                run: ./gradlew check
 
