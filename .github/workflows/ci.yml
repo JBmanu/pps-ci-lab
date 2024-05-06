@@ -6,8 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: set jdk
-        uses: joschi/setup-jdk@2.3.0
+        uses:
+          actions/checkout@v4
+          actions/setup-java@v4
         with:
-          java-version: 15
+          java-version: 17
       - name: Build
         run: ./gradlew build
